@@ -106,8 +106,19 @@ var uid = function () {
 
 var addTrack = function (name, artist, album) {
   var track = library.tracks;
-  var newID =
+  var newID = "t" + uid();
+
+  track[newID] = {
+    id: newID,
+    name: name,
+    artist: artist,
+    album: album
+  }
+
+  console.log(track[newID]);
 }
+
+addTrack('west', 'kanye', 'dunno');
 
 
 // adds a playlist to the library
