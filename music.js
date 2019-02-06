@@ -113,18 +113,30 @@ var addTrack = function (name, artist, album) {
     name: name,
     artist: artist,
     album: album
-  }
+  };
 
   console.log(track[newID]);
 }
 
-addTrack('west', 'kanye', 'dunno');
+// addTrack('west', 'kanye', 'dunno');
 
 
 // adds a playlist to the library
 
-var addPlaylist = function (name) {}
+var addPlaylist = function (name) {
+  var list = library.tracks;
+  var newID = "p" + uid();
 
+  list[newID] = {
+    id: newID,
+    name: name,
+    track: "t01"
+  };
+
+  console.log(list[newID]);
+}
+
+addPlaylist('woop');
 
 // STRETCH:
 // given a query string string, prints a list of tracks
