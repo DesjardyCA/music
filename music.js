@@ -84,8 +84,14 @@ printPlaylist("p01");
 
 // adds an existing track to an existing playlist
 
-var addTrackToPlaylist = function (trackId, playlistId) {}
+var addTrackToPlaylist = function (trackId, playlistId) {
+  list = library.playlists[playlistId];
 
+  list.tracks.push(trackId);
+}
+
+addTrackToPlaylist('t03', 'p01');
+printPlaylist("p01");
 
 // generates a unique id
 // (use this for addTrack and addPlaylist) 
